@@ -1,8 +1,9 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
     <article class="center cf pv5 measure-wide-l">
-      <h1>
-        This is not the page you were looking for
+      <img src="/404.png" alt="Not even the image can be found">
+      <h1 style="text-align:center">
+        {{ i18n "message404" . }}
       </h1>
     </article>
 {{ end }}

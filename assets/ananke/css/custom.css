@@ -1,0 +1,26 @@
+.items {
+  display: inline-block;
+  margin: 2rem;
+  padding: .1rem;
+}
+
+.items h3 {
+  color: #222;
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.items p {
+  color: #444;
+}
+
+.items b {
+  color: #333;
+}
+
+.spotlight {
+}
+
+.image-right {
+
+}

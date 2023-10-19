@@ -4,6 +4,9 @@ other = "More"
 [allTitle]
 other = "All {{.Title }}"
 
+[offer]
+other = "My Offers"
+
 [recentTitle]
 other = "Recent {{.Title }}"
 
@@ -47,3 +50,12 @@ other = "{{ .Count }} words"
 
 [pageTitle]
 other = "{{ .Name }} page"
+
+[contactButton]
+other = "Get in Touch"
+
+[tellMeMoreButton]
+other = "Tell Me More"
+
+[message404]
+other = "There is nothing here but an empty page."

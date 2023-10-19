@@ -12,7 +12,26 @@
     {{/* Derive the section name  */}}
     {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
+	{{/* Include feature items */}}
+	<div class="pa3 w-80-ns center nested-copy-line-height">
+		{{ with .Site.GetPage "section" $section_name }}
+		<h1 class="flex-none tc-l center">
+			{{ $.Param "recent_copy" | default (i18n "offer" .) }}
+		</h1>
+		{{ end }}
+        <section class="flex-ns flex-wrap justify-around mt4">
+		  {{ $ldata := index .Site.Data .Site.Language.Lang }}
+          {{ with $ldata.items }}
+               {{ partial "items.html" . }}
+          {{ end }}
+        </section>
+    </div>
+
+    {{/* Include spotlights */}}
+    
+
+
+	<div class="pa3 pa4-ns w-100 w-70-ns center">
       {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
        {{ with .Site.GetPage "section" $section_name }}
           <h1 class="flex-none">
