@@ -10,7 +10,7 @@
     <div class="flex-l items-center">
       {{ if not (eq .Kind "home") }}
         <div class="pr4 f5">
-          <a href="mailto:{{ .Site.Params.mail }}" class="link db pt2 pb1 br3 white grow w4 tc" style="background-color:#773200">{{ i18n "contactButton" . }}</a>
+          <a href="mailto:{{ .Site.Params.mail }}" class="link db pt2 pb1 br3 white grow w4 tc" style="background-color:#00237c">{{ i18n "contactButton" . }}</a>
         </div>
       {{ end }}
       {{ partial "i18nlist.html" . }}
