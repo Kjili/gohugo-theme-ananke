@@ -5,7 +5,7 @@ other = "Mehr"
 other = "Alle {{.Title }}"
 
 [offer]
-other = "Meine Angebote"
+other = "Wie kann ich dir helfen?"
 
 [recentTitle]
 other = "Neueste {{.Title }}"

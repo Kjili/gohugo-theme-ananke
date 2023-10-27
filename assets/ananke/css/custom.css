@@ -18,7 +18,15 @@
   color: #333;
 }
 
-.spotlight {
+.spotlight-text {
+  padding-top: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 3rem;
+}
+
+.spotlight-image {
+  padding: 3.5rem;
 }
 
 .image-right {

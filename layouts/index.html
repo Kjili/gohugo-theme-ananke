@@ -13,12 +13,10 @@
     {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
 	{{/* Include feature items */}}
-	<div class="pa3 w-80-ns center nested-copy-line-height">
-		{{ with .Site.GetPage "section" $section_name }}
+	<div class="pa3 w-90-ns center nested-copy-line-height">
 		<h1 class="flex-none tc-l center">
-			{{ $.Param "recent_copy" | default (i18n "offer" .) }}
+			{{ i18n "offer" . }}
 		</h1>
-		{{ end }}
         <section class="flex-ns flex-wrap justify-around mt4">
 		  {{ $ldata := index .Site.Data .Site.Language.Lang }}
           {{ with $ldata.items }}
@@ -28,7 +26,14 @@
     </div>
 
     {{/* Include spotlights */}}
-    
+    <div class="pa2 w-100-ns bg-washed-yellow center nested-copy-line-height">
+		<section>
+		  {{ $ldata := index .Site.Data .Site.Language.Lang }}
+          {{ with $ldata.spotlights }}
+               {{ partial "spotlight.html" . }}
+          {{ end }}
+        </section>
+    </div>
 
 
 	<div class="pa3 pa4-ns w-100 w-70-ns center">

@@ -1,0 +1,25 @@
+{{ range .spotlights }}
+<div class="{{ .spotlightBG }}" id="{{ .id }}">
+    <div class="w-80-ns center flex-ns flex-wrap justify-around mt4">
+	{{ if eq .style "image-left" }}
+		<div class="w-50-ns spotlight-image">
+            <img src="{{ .image }}" alt="" />
+            <div class="tl" style="font-size:8pt">{{ .attribution | safeHTML }}</div>
+        </div>
+        <div class="w-50-ns spotlight-text">
+            <h2>{{ .title }}</h2>
+            <p>{{ .content | safeHTML }}</p>
+        </div>
+    {{ else }}
+        <div class="w-50-ns spotlight-text">
+            <h2>{{ .title }}</h2>
+            <p>{{ .content | safeHTML }}</p>
+        </div>
+        <div class="w-50-ns spotlight-image">
+            <img src="{{ .image }}" alt="" />
+            <div class="tr" style="font-size:8pt">{{ .attribution | safeHTML }}</div>
+        </div>
+    {{ end }}
+    </div>
+</div>
+{{ end }}

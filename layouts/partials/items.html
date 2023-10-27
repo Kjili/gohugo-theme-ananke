@@ -5,9 +5,8 @@
           <h3>{{ .name }}</h3>
           <p>{{ .content }}</p>
         </div>
-        <div class="flex fr pb3 f5">
-        <!--<div class="flex justify-between pb3 f5">-->
-	      <!-- <a href="mailto:{{ .mail }}?subject={{ .mailSubject }}" class="link db pa2 br3 {{ .buttonColor }} black grow w4 tc" style="margin-left:2rem">{{ i18n "tellMeMoreButton" . }}</a>-->
+        <div class="flex justify-between pb3 f5">
+	      <a href="#{{ .link }}" class="link db pa2 br3 {{ .buttonColor }} black grow w4 tc" style="margin-left:2rem">{{ i18n "tellMeMoreButton" . }}</a>
           <a href="mailto:{{ .mail }}?subject={{ .mailSubject }}" class="link db pa2 br3 br3 bg-dark-blue white grow w4 tc" style="margin-right:2rem">{{ i18n "contactButton" . }}</a>
         </div>
 	</div>
