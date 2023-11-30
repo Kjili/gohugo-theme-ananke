@@ -32,3 +32,9 @@
 .image-right {
 
 }
+
+@media screen and (max-width: 480px) {
+.restrict-logo-size {
+  height: 65px;
+}
+}
