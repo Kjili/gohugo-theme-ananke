@@ -55,7 +55,7 @@ other = "{{ .Name }} Seite"
 other = "Kontakt aufnehmen"
 
 [tellMeMoreButton]
-other = "Erzähl mir mehr"
+other = "Mehr dazu..."
 
 [message404]
 other = "Diese Seite ist leer."
