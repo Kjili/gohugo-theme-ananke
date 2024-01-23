@@ -1,13 +1,20 @@
-{{ range .items }}
-<div class="relative w-100 w-30-l mb4 {{ .style }}">
-	<div class="items">
-		  <b>{{ .tag }}</b>
-          <h3>{{ .name }}</h3>
-          <p>{{ .content }}</p>
-        </div>
-        <div class="flex justify-between pb3 f5">
-	      <a href="#{{ .link }}" class="link db pa2 br3 {{ .buttonColor }} black grow w4 tc" style="margin-left:2rem">{{ i18n "tellMeMoreButton" . }}</a>
-          <a href="mailto:{{ .mail }}?subject={{ .mailSubject }}" class="link db pa2 br3 br3 bg-dark-blue white grow w4 tc" style="margin-right:2rem">{{ i18n "contactButton" . }}</a>
-        </div>
+<section>
+	<h3 class="f2 db tc center">{{ .title | safeHTML }}</h3>
+	{{ if .subtitle }}
+		<b class="f3 db tc center">{{ .subtitle | safeHTML }}</b>
+	{{ end }}
+	<div class="flex-ns flex-wrap justify-around mt4 relative w-100">
+		{{ range .items }}
+		<div class="tc center">
+			<img src={{ .image }} alt="" style="max-width: 450px;" />
+			<h3 class="f3">{{ .title }}</h3>
+			<p style="max-width: 450px;">{{ .text }}</p>
+			{{ if .contact }}
+				<div class="f4">
+					<a href="mailto:{{ .Site.Params.mail }}?subject={{ .contact }}" class="link db pt2 pb1 ph2 br3 mt3 mb3 white grow w5 center" style="background-color:#00237c">{{ i18n "contactButton" . }}</a>
+				</div>
+			{{ end }}
+		</div>
+		{{ end }}
 	</div>
-{{ end }}
+</section>

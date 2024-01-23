@@ -12,27 +12,19 @@
     {{/* Derive the section name  */}}
     {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
-	{{/* Include feature items */}}
-	<div class="pa3 w-90-ns center nested-copy-line-height">
-		<h1 class="flex-none tc-l center">
-			{{ i18n "offer" . }}
-		</h1>
-        <section class="flex-ns flex-wrap justify-around mt4">
-		  {{ $ldata := index .Site.Data .Site.Language.Lang }}
-          {{ with $ldata.items }}
-               {{ partial "items.html" . }}
-          {{ end }}
-        </section>
+    {{/* Include features */}}
+    <div class="w-80-ns center nested-copy-line-height">
+	{{ $ldata := index .Site.Data .Site.Language.Lang }}
+	{{ with $ldata.what }}
+		{{ partial "items.html" . }}
+	{{ end }}
     </div>
 
-    {{/* Include spotlights */}}
-    <div class="pa2 w-100-ns center nested-copy-line-height">
-		<section>
-		  {{ $ldata := index .Site.Data .Site.Language.Lang }}
-          {{ with $ldata.spotlights }}
-               {{ partial "spotlight.html" . }}
-          {{ end }}
-        </section>
+	<div class="w-60-ns center nested-copy-line-height mb4">
+	{{ $ldata := index .Site.Data .Site.Language.Lang }}
+	{{ with $ldata.how }}
+		{{ partial "items.html" . }}
+	{{ end }}
     </div>
 
 

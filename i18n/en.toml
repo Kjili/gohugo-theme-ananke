@@ -52,7 +52,7 @@ other = "{{ .Count }} words"
 other = "{{ .Name }} page"
 
 [contactButton]
-other = "Get in Touch"
+other = "Request a Free Call"
 
 [tellMeMoreButton]
 other = "Tell Me More"
