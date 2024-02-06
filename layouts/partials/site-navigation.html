@@ -2,12 +2,15 @@
   <div class="flex-l justify-between items-center center tc">
 
       <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 dib flex items-center">
-        {{ if not (eq .Kind "home") }}
+
           {{ with .Site.Params.site_logo }}
             <img src="{{ relURL . }}" class="w100 mw3-ns restrict-logo-size" alt="" />
           {{ end }}
-        {{ end }}
-        <span class="ml2 pt2">{{ .Site.Title }}</span>
+
+        <div class="ml2">
+          <span class="pt2">{{ .Site.Title }}</span>
+          <span class="subtitle tl-l">{{ .Site.Params.subtitle }}</span>
+        </div>
       </a>
 
     <div class="flex-l items-center">
